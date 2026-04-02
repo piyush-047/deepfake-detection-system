@@ -41,8 +41,7 @@ The system follows a **multi-stage detection pipeline**:
 
 ## 📸 Demo Output
 
-![Result](assets/demo_output.png)
-
+![Result](assets/detection_output.png)
 ### 📊 Sample Output
 
 * Deepfake Confidence: ~50–60%
