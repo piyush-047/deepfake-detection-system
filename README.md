@@ -2,22 +2,21 @@
 
 ## 🚀 Overview
 
-An AI-powered deepfake detection system designed to identify manipulated images and videos using advanced machine learning techniques.
-The system analyzes visual, temporal, and metadata patterns to detect inconsistencies and classify content as real or fake.
+An AI-powered deepfake detection system designed to identify manipulated images and videos.
+The system demonstrates how modern machine learning techniques (CNN + RNN) can be used to analyze visual and temporal patterns to detect inconsistencies.
 
-This project is inspired by real-world challenges in social media platforms where misinformation spreads rapidly through manipulated media. 
+This project focuses on **system design, workflow, and detection logic**, inspired by real-world challenges in misinformation and digital media manipulation.
 
 ---
 
 ## 🔥 Key Features
 
-* Image & Video Deepfake Detection
-* CNN + RNN-based hybrid model
+* Image & Video Deepfake Detection (simulated pipeline)
 * Confidence score prediction (Real vs Fake)
-* Temporal inconsistency analysis
+* Temporal inconsistency analysis (concept-based)
+* Explainable detection reasoning
+* Clean and interactive UI
 * Scan history tracking
-* Explainable AI (basis for detection)
-* User-friendly interface (upload & detect)
 
 ---
 
@@ -29,56 +28,53 @@ This project is inspired by real-world challenges in social media platforms wher
 
 ## ⚙️ Methodology
 
-The system uses a **multimodal detection approach** combining:
+The system follows a **multi-stage detection pipeline**:
 
-* **Visual Analysis (CNN / ViT)** → detects image artifacts
-* **Temporal Analysis (RNN / LSTM)** → identifies frame inconsistencies
-* **Metadata Analysis** → detects suspicious patterns
-* **Model Fusion** → combines outputs for final prediction
+* **Visual Analysis (CNN-based)** → detects image artifacts
+* **Temporal Analysis (RNN-based)** → identifies inconsistencies across frames
+* **Feature Fusion** → combines multiple signals
+* **Final Classification** → generates confidence score
 
-👉 This improves accuracy and reduces false positives. 
+👉 This hybrid approach improves detection robustness and reduces false positives.
 
 ---
 
 ## 📸 Demo Output
 
-### 🖼️ Detection Result
+![Result](assets/demo_output.png)
 
-![Result](assets/demo.png)
+### 📊 Sample Output
 
-### 📊 Confidence Output
-
-* Deepfake Confidence: 53.20%
-* Authentic Confidence: 46.80%
+* Deepfake Confidence: ~50–60%
+* Authentic Confidence: ~40–50%
 
 ---
 
 ## ⚙️ How It Works
 
 1. User uploads image/video
-2. Frames extracted (for videos)
-3. CNN analyzes spatial features
-4. RNN checks temporal inconsistencies
-5. Model calculates confidence score
-6. Final classification (Real / Deepfake)
+2. Input is processed and analyzed
+3. Detection logic evaluates patterns
+4. Confidence score is generated
+5. Output displayed with explanation
 
 ---
 
 ## 📊 Results
 
-* High detection accuracy on controlled datasets
-* Works for both images and videos
-* Detects facial inconsistencies and motion artifacts
-* Provides explainable reasoning for decisions
+* Fast response time (instant)
+* Interactive UI-based analysis
+* Demonstrates deepfake detection workflow
+* Provides explainable reasoning
 
 ---
 
 ## 🎯 Use Cases
 
 * Social media content verification
-* Cybersecurity & misinformation detection
-* Digital forensics
-* Media authenticity validation
+* Cybersecurity awareness
+* Digital forensics learning
+* AI/ML system prototyping
 
 ---
 
@@ -88,7 +84,7 @@ The system uses a **multimodal detection approach** combining:
 git clone https://github.com/piyush-047/deepfake-detection-system
 cd deepfake-detection-system
 pip install -r requirements.txt
-python app.py
+streamlit run app/app.py
 ```
 
 ---
@@ -96,21 +92,26 @@ python app.py
 ## 📁 Project Structure
 
 ```
-app/        → Model & logic
-assets/     → Demo images
-models/     → Trained models
-data/       → Sample inputs
+app/        → Streamlit app & logic
+assets/     → Screenshots & demo output
 ```
+
+---
+
+## ⚠️ Important Note
+
+This project demonstrates the **workflow and architecture** of a deepfake detection system.
+Predictions are **simulated** for demonstration purposes and do not represent a trained production model.
 
 ---
 
 ## 🔮 Future Improvements
 
-* Real-time video detection
-* Audio deepfake detection
-* Transformer-based models (ViT, BERT)
-* Explainable AI heatmaps (Grad-CAM)
-* Deployment using Docker
+* Real deep learning model integration
+* Video frame extraction pipeline
+* Transformer-based models (ViT)
+* Explainable AI visualizations (Grad-CAM)
+* Deployment with Docker / Web App
 
 ---
 
